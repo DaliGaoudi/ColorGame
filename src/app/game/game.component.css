@@ -1,0 +1,22 @@
+input{
+    border: 2px;
+    border-color: black;
+    background-color: white;
+    margin-right: 20px;
+}
+
+
+.gen{
+    border-color: black;
+    background-color: white;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    size: 10px;
+}
+
+.history{
+    border-radius: 5px;
+    background-color: blueviolet;
+    size:14px;
+    
+}

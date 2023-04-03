@@ -1,0 +1,18 @@
+<button routerLink="/game-access"> Main Page</button>
+
+<form #signupform="ngForm" (ngSubmit)="registerUser()">
+    <span class="error" *ngIf="valid">enter valid user details</span>
+    <label for="email" >Email *:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]="user.email" minlength="6" required><br><br>
+
+    <label for="name">Name *:</label><br>
+    <input type="name" id="name" name="name" placeholder="Enter name" [(ngModel)]="user.name" required>
+
+    <label for="password">Password *:</label><br>
+    <input type="password" name="password"
+           [(ngModel)]="user.password" minlength="5" required placeholder="Enter Password"><br><br>
+           <label>admin?</label>
+           <input type="checkbox" placeholder="admin?" [(ngModel)]="user.is_admin" [ngModelOptions]="{standalone: true}">
+           <br>
+           <button type="submit">submit</button>
+</form>

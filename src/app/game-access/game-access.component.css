@@ -1,0 +1,19 @@
+button{
+    background-color: rgb(215, 124, 27);
+    border: none;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.logout{
+    align-self: flex-end;
+}
+
+h1{
+    size: 50px;
+}

@@ -1,0 +1,45 @@
+
+.button{
+    background-color: rgb(215, 124, 27);
+    border: none;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+label{
+  color: aliceblue;
+  display: block;
+  margin-top: 1em;
+  align-self: center;
+}
+
+input:invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+
+input:valid{
+  background-color: ivory;
+  border: none;
+  outline: 2px solid green;
+  border-radius: 5px;
+}
+
+.error{
+  color: red;
+  size: 12px;
+  margin-top: 5px;
+}
+
+button{
+  background-color: orange;
+  size: 12px;
+  border-radius: 5px;
+}

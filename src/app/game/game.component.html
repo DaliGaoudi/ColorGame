@@ -1,0 +1,19 @@
+<input  type="number" id="lines" [(ngModel)]="lines" (ngModelChange)="generateButtons()">
+<input type="number" id="columns" [(ngModel)]="columns" (ngModelChange)="generateButtons()"><br>
+  
+<div *ngFor="let row of buttons">
+    <div>
+      <button *ngFor="let button of row" [class]="gen" [style]="button.style" [id]="'button-' + button.id" (click)="togglePopup(button)">{{ button.text }}</button>
+    </div>
+  </div>
+  <div *ngIf="showPopup">
+    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+      <h2>Choose a color</h2>
+      <input type="text" style="background-color: black;border-radius: 2px; border-color: black;color: white;" [(ngModel)]="color" >
+      <button style="background-color: #ff0000; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 16px;" (click)="togglePopup(popupButton)">Cancel</button>
+      <button style="background-color: #00ff22; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 16px;" (click)="changeColor(popupButton)">Valider</button>  
+    </div>
+  </div>
+
+  <button class="history" routerLink="/historique"> see activity log</button>
+  

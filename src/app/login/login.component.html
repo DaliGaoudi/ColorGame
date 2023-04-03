@@ -1,0 +1,15 @@
+<div class="main">
+    <form #loginform="ngForm" (ngSubmit)="UserLogin()">
+      <small class="danger">{{msg}}</small>
+      <label for="email" >Email *:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]="user.email" minlength="6" required><br><br>
+
+      <label for="password">Password *:</label><br>
+      <input type="password" name="password"
+             [(ngModel)]="user.password" minlength="5" required placeholder="Enter Password"><br><br>
+              <button type="submit" class="button">login</button>
+    </form>
+        <div>
+          <span  style="color: red; size: 12px; margin-top: 5px;" class="error" *ngIf="not_logged_in">Login failed, try new credentials</span>
+        </div>
+      </div>

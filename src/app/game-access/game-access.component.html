@@ -1,0 +1,7 @@
+<h1> Welcome {{name}}</h1>
+<span *ngIf="isAdmin">
+    <button routerLink="/signup"> add a user</button>
+</span>
+
+<button routerLink="/game">ColorGame</button>
+<button class="logout" routerLink="/logout">LogOut</button>
